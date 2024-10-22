@@ -20,11 +20,11 @@ function runGame(gameType){
     let num2 = Math.floor(Math.random() * 25) +1;
 
     if(gameType === "addition"){
-        displayAdditionQuestion(num1,num2);
+        displayAdditionQuestion(num1, num2);
     }
     else{
         alert(`Unknown game type: ${gameType}`);
-        throw `Unknown game type ${gameType}.Aborting`
+        throw `Unknown game type: ${gameType}. Aborting!`;
     }
 
 
@@ -34,7 +34,7 @@ function runGame(gameType){
 
 function checkAnswer(){
     let userAnswer = parseInt(document.getElementById("answer-box").value) ;
-    let calculatedAnswer = calculateCorrectAnswer[0];
+    let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = userAnswer === calculatedAnswer[0];
 
     if(isCorrect){
@@ -43,7 +43,7 @@ function checkAnswer(){
     else{
         alert(`Aww............ you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}`)
     }
-runGame(calculatedAnswer[1])
+    runGame(calculatedAnswer[1]);
 }
 
 function calculateCorrectAnswer(){
@@ -56,7 +56,7 @@ function calculateCorrectAnswer(){
     }
     else{
         alert(`Unimplemented operator ${operator}`);
-        throw `Unimplemented operator ${operator}.Aborting!`
+        throw `Unimplemented operator ${operator}.Aborting!`;
     }
 
 }
@@ -79,7 +79,7 @@ function displayAdditionQuestion(operand1, operand2){
 
 }
 
-function displySubtractQuestion(){
+function displaySubtractQuestion(){
 
 }
 
