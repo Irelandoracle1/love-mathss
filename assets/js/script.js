@@ -26,9 +26,6 @@ function runGame(gameType){
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
-
-
-
 }
 
 
