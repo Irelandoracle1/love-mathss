@@ -176,33 +176,31 @@ body {
 
 /* --------- Media queries */
 
-@media (max-width: 414px) {
-    .controls-area {
-        width: 100%;
+@media (max-width: 320px) {
+    .game-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    
+    .controls-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
 
     .btn--big {
-        margin: 0 10px;
-        padding: 5px;
-        border: 5px solid;
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-
-    .btn--big::after {
-        font-size: 0.6rem;
-        left: -0.7rem;
+        margin: 5px; /* Reduce margin */
+        width: 40px;  /* Smaller buttons */
+        height: 40px;
+        font-size: 1.2rem;
     }
 
     .question-area {
-        padding: 10% 0;
-        width: 100%;
+        padding: 5px 0; /* Decrease padding */
     }
-
-    .question-area span {
-        padding: 0;
-    }
+}
 
     .answer-message {
         display: block;
@@ -229,7 +227,7 @@ body {
     .heading {
         font-size: 2rem;
     }
-}
+
 
 @media (max-width: 320px) {
     .game-area {
